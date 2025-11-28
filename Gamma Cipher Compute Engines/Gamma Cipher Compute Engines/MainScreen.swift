@@ -9,15 +9,22 @@
 
 // MARK: Import section
 
+import ConfidentialKit
 import SwiftUI
 
 
 
-// MARK: - ComputeEngine
+// MARK: - CFLStreamEncryptionComputeMode
 
-enum ComputeEngine: String, CaseIterable {
-    case cpu = "CPU"
-    case gpu = "GPU"
+extension CFLStreamEncryptionComputeMode: @retroactive CaseIterable {
+    public static var allCases: [CFLStreamEncryptionComputeMode] = [.cpu, .gpu]
+
+    var name: String {
+        switch self {
+        case .cpu: "CPU"
+        case .gpu: "GPU"
+        }
+    }
 }
 
 
@@ -27,7 +34,7 @@ enum ComputeEngine: String, CaseIterable {
 struct MainScreen: View {
     private let imageSize: Int
 
-    @State private var selectedComputeEngine: ComputeEngine = .cpu
+    @State private var selectedComputeMode: CFLStreamEncryptionComputeMode = .cpu
 
     @State private var cpuExecutionTime: String = "- - -"
     @State private var gpuExecutionTime: String = "- - -"
@@ -52,9 +59,9 @@ struct MainScreen: View {
                     HStack {
                         Text("Compute Engine:")
 
-                        Picker("", selection: $selectedComputeEngine) {
-                            ForEach(ComputeEngine.allCases, id: \.self) { computeEngine in
-                                Text(computeEngine.rawValue)
+                        Picker("", selection: $selectedComputeMode) {
+                            ForEach(CFLStreamEncryptionComputeMode.allCases, id: \.self) { computeMode in
+                                Text(computeMode.name)
                             }
                         }
                         .pickerStyle(.segmented)
@@ -66,17 +73,12 @@ struct MainScreen: View {
                             let imageSizeInMBytes = imageSizeInBytes / 1_048_576
 
                             SettingsView(
-                                computeEngine: selectedComputeEngine,
+                                computeMode: selectedComputeMode,
                                 imageSizeInMBytes: imageSizeInMBytes,
-                                executionTime: selectedComputeEngine == .cpu ? cpuExecutionTime : gpuExecutionTime,
+                                executionTime: selectedComputeMode == .cpu ? cpuExecutionTime : gpuExecutionTime,
                                 copiesCount: $copiesCount
                             ) {
-                                switch selectedComputeEngine {
-                                case .cpu:
-                                    cryptUsingCPU()
-                                case .gpu:
-                                    cryptUsingGPU()
-                                }
+                                runTest()
                             }
                         }
                     }
@@ -102,37 +104,27 @@ struct MainScreen: View {
         return image.pngData()!
     }
 
-    private func cryptUsingCPU() {
-        cpuExecutionTime = "Computing"
-
-        Task.detached(priority: .high) {
-            let cipher = GammaCipher(using: .cpu)
-
-            let imageData = getImageData()
-
-            var plaintext = Data()
-            for _ in await 0 ..< Int(copiesCount) {
-                plaintext.append(imageData)
-            }
-
-            let keystream = cipher?.generateKeystream(length: plaintext.count)!
-
-            let startTime = CACurrentMediaTime()
-
-            let _ = cipher.crypt(consume plaintext, using: consume keystream)
-
-            let endTime = CACurrentMediaTime()
-            let executionTime = endTime - startTime
-
-            cpuExecutionTime = unsafe String(format: "%.10f sec", executionTime)
+    private func runTest() {
+        switch selectedComputeMode {
+        case .cpu:
+            cpuExecutionTime = "Computing"
+        case .gpu:
+            gpuExecutionTime = "Computing"
         }
-    }
 
-    private func cryptUsingGPU() {
-        gpuExecutionTime = "Computing"
+        Task.detached(priority: .high) { [selectedComputeMode] in
+            guard let cipher = CFLStreamEncryption(cipher: .gamma(using: selectedComputeMode)) else {
+                await MainActor.run {
+                    switch selectedComputeMode {
+                    case .cpu:
+                        cpuExecutionTime = "- - -"
+                    case .gpu:
+                        gpuExecutionTime = "- - -"
+                    }
+                }
 
-        Task.detached(priority: .high) {
-            let cipher = GammaCipher(using: .gpu)
+                return
+            }
 
             let imageData = getImageData()
 
@@ -141,7 +133,18 @@ struct MainScreen: View {
                 plaintext.append(imageData)
             }
 
-            let keystream = cipher?.generateKeystream(length: plaintext.count)
+            guard let keystream = cipher.generateKeystream(length: plaintext.count) else {
+                await MainActor.run {
+                    switch selectedComputeMode {
+                    case .cpu:
+                        cpuExecutionTime = "- - -"
+                    case .gpu:
+                        gpuExecutionTime = "- - -"
+                    }
+                }
+
+                return
+            }
 
             let startTime = CACurrentMediaTime()
 
@@ -150,7 +153,14 @@ struct MainScreen: View {
             let endTime = CACurrentMediaTime()
             let executionTime = endTime - startTime
 
-            gpuExecutionTime = unsafe String(format: "%.10f sec", executionTime)
+            await MainActor.run {
+                switch selectedComputeMode {
+                case .cpu:
+                    cpuExecutionTime = unsafe String(format: "%.10f sec", executionTime)
+                case .gpu:
+                    gpuExecutionTime = unsafe String(format: "%.10f sec", executionTime)
+                }
+            }
         }
     }
 }

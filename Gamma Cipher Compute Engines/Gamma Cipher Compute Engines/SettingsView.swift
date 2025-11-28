@@ -9,6 +9,7 @@
 
 // MARK: Import section
 
+import ConfidentialKit
 import SwiftUI
 
 
@@ -16,7 +17,7 @@ import SwiftUI
 // MARK: - SettingsView
 
 struct SettingsView: View {
-    let computeEngine: ComputeEngine
+    let computeMode: CFLStreamEncryptionComputeMode
     let imageSizeInMBytes: Int
     let executionTime: String
 
@@ -27,7 +28,7 @@ struct SettingsView: View {
     var body: some View {
         VStack(spacing: 40) {
             VStack(alignment: .leading, spacing: 20) {
-                Text("GC \(computeEngine.rawValue) Compute Engine")
+                Text("GC \(computeMode.name) Compute Engine")
                     .bold()
 
                 VStack(alignment: .leading) {

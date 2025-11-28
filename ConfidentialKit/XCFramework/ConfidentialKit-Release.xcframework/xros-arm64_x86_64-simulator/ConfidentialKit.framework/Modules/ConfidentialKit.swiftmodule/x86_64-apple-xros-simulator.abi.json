@@ -1,0 +1,826 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "ConfidentialKit",
+    "printedName": "ConfidentialKit",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConfidentialKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConfidentialKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConfidentialKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Metal",
+        "printedName": "Metal",
+        "declKind": "Import",
+        "moduleName": "ConfidentialKit"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConfidentialKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConfidentialKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConfidentialKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConfidentialKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CFLStreamEncryptionCipher",
+        "printedName": "CFLStreamEncryptionCipher",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "gamma",
+            "printedName": "gamma",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ConfidentialKit.CFLStreamEncryptionCipher.Type) -> (ConfidentialKit.CFLStreamEncryptionComputeMode) -> ConfidentialKit.CFLStreamEncryptionCipher",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ConfidentialKit.CFLStreamEncryptionComputeMode) -> ConfidentialKit.CFLStreamEncryptionCipher",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CFLStreamEncryptionCipher",
+                        "printedName": "ConfidentialKit.CFLStreamEncryptionCipher",
+                        "usr": "s:15ConfidentialKit25CFLStreamEncryptionCipherO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(using: ConfidentialKit.CFLStreamEncryptionComputeMode)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CFLStreamEncryptionComputeMode",
+                            "printedName": "ConfidentialKit.CFLStreamEncryptionComputeMode",
+                            "usr": "s:15ConfidentialKit30CFLStreamEncryptionComputeModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ConfidentialKit.CFLStreamEncryptionCipher.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CFLStreamEncryptionCipher",
+                        "printedName": "ConfidentialKit.CFLStreamEncryptionCipher",
+                        "usr": "s:15ConfidentialKit25CFLStreamEncryptionCipherO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15ConfidentialKit25CFLStreamEncryptionCipherO5gammayAcA0cD11ComputeModeO_tcACmF",
+            "mangledName": "$s15ConfidentialKit25CFLStreamEncryptionCipherO5gammayAcA0cD11ComputeModeO_tcACmF",
+            "moduleName": "ConfidentialKit",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 0
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:15ConfidentialKit25CFLStreamEncryptionCipherO",
+        "mangledName": "$s15ConfidentialKit25CFLStreamEncryptionCipherO",
+        "moduleName": "ConfidentialKit",
+        "intro_Macosx": "15.0",
+        "intro_iOS": "18.0",
+        "intro_tvOS": "18.0",
+        "declAttributes": [
+          "AccessControl",
+          "Frozen",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "RawDocComment"
+        ],
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConfidentialKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CFLStreamEncryptionComputeMode",
+        "printedName": "CFLStreamEncryptionComputeMode",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "cpu",
+            "printedName": "cpu",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ConfidentialKit.CFLStreamEncryptionComputeMode.Type) -> ConfidentialKit.CFLStreamEncryptionComputeMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CFLStreamEncryptionComputeMode",
+                    "printedName": "ConfidentialKit.CFLStreamEncryptionComputeMode",
+                    "usr": "s:15ConfidentialKit30CFLStreamEncryptionComputeModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ConfidentialKit.CFLStreamEncryptionComputeMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CFLStreamEncryptionComputeMode",
+                        "printedName": "ConfidentialKit.CFLStreamEncryptionComputeMode",
+                        "usr": "s:15ConfidentialKit30CFLStreamEncryptionComputeModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15ConfidentialKit30CFLStreamEncryptionComputeModeO3cpuyA2CmF",
+            "mangledName": "$s15ConfidentialKit30CFLStreamEncryptionComputeModeO3cpuyA2CmF",
+            "moduleName": "ConfidentialKit",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "gpu",
+            "printedName": "gpu",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ConfidentialKit.CFLStreamEncryptionComputeMode.Type) -> ConfidentialKit.CFLStreamEncryptionComputeMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CFLStreamEncryptionComputeMode",
+                    "printedName": "ConfidentialKit.CFLStreamEncryptionComputeMode",
+                    "usr": "s:15ConfidentialKit30CFLStreamEncryptionComputeModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ConfidentialKit.CFLStreamEncryptionComputeMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CFLStreamEncryptionComputeMode",
+                        "printedName": "ConfidentialKit.CFLStreamEncryptionComputeMode",
+                        "usr": "s:15ConfidentialKit30CFLStreamEncryptionComputeModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:15ConfidentialKit30CFLStreamEncryptionComputeModeO3gpuyA2CmF",
+            "mangledName": "$s15ConfidentialKit30CFLStreamEncryptionComputeModeO3gpuyA2CmF",
+            "moduleName": "ConfidentialKit",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CFLStreamEncryptionComputeMode",
+                "printedName": "ConfidentialKit.CFLStreamEncryptionComputeMode",
+                "usr": "s:15ConfidentialKit30CFLStreamEncryptionComputeModeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CFLStreamEncryptionComputeMode",
+                "printedName": "ConfidentialKit.CFLStreamEncryptionComputeMode",
+                "usr": "s:15ConfidentialKit30CFLStreamEncryptionComputeModeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ConfidentialKit30CFLStreamEncryptionComputeModeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s15ConfidentialKit30CFLStreamEncryptionComputeModeO2eeoiySbAC_ACtFZ",
+            "moduleName": "ConfidentialKit",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15ConfidentialKit30CFLStreamEncryptionComputeModeO9hashValueSivp",
+            "mangledName": "$s15ConfidentialKit30CFLStreamEncryptionComputeModeO9hashValueSivp",
+            "moduleName": "ConfidentialKit",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15ConfidentialKit30CFLStreamEncryptionComputeModeO9hashValueSivg",
+                "mangledName": "$s15ConfidentialKit30CFLStreamEncryptionComputeModeO9hashValueSivg",
+                "moduleName": "ConfidentialKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ConfidentialKit30CFLStreamEncryptionComputeModeO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s15ConfidentialKit30CFLStreamEncryptionComputeModeO4hash4intoys6HasherVz_tF",
+            "moduleName": "ConfidentialKit",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:15ConfidentialKit30CFLStreamEncryptionComputeModeO",
+        "mangledName": "$s15ConfidentialKit30CFLStreamEncryptionComputeModeO",
+        "moduleName": "ConfidentialKit",
+        "intro_Macosx": "15.0",
+        "intro_iOS": "18.0",
+        "intro_tvOS": "18.0",
+        "declAttributes": [
+          "AccessControl",
+          "Frozen",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "RawDocComment"
+        ],
+        "isEnumExhaustive": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "BitwiseCopyable",
+            "printedName": "BitwiseCopyable",
+            "usr": "s:s15BitwiseCopyableP",
+            "mangledName": "$ss15BitwiseCopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConfidentialKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CFLStreamEncryptable",
+        "printedName": "CFLStreamEncryptable",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "generateKeystream",
+            "printedName": "generateKeystream(length:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "paramValueOwnership": "Owned",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ConfidentialKit20CFLStreamEncryptableP17generateKeystream6length10Foundation4DataVSgSin_tF",
+            "mangledName": "$s15ConfidentialKit20CFLStreamEncryptableP17generateKeystream6length10Foundation4DataVSgSin_tF",
+            "moduleName": "ConfidentialKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ConfidentialKit.CFLStreamEncryptable>",
+            "sugared_genericSig": "<Self where Self : ConfidentialKit.CFLStreamEncryptable>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "crypt",
+            "printedName": "crypt(_:using:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "paramValueOwnership": "Owned",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "paramValueOwnership": "Owned",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ConfidentialKit20CFLStreamEncryptableP5crypt_5using10Foundation4DataVSgAHn_AHntF",
+            "mangledName": "$s15ConfidentialKit20CFLStreamEncryptableP5crypt_5using10Foundation4DataVSgAHn_AHntF",
+            "moduleName": "ConfidentialKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : ConfidentialKit.CFLStreamEncryptable>",
+            "sugared_genericSig": "<Self where Self : ConfidentialKit.CFLStreamEncryptable>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:15ConfidentialKit20CFLStreamEncryptableP",
+        "mangledName": "$s15ConfidentialKit20CFLStreamEncryptableP",
+        "moduleName": "ConfidentialKit",
+        "intro_Macosx": "15.0",
+        "intro_iOS": "18.0",
+        "intro_tvOS": "18.0",
+        "declAttributes": [
+          "AccessControl",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConfidentialKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CFLStreamEncryption",
+        "printedName": "CFLStreamEncryption",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(cipher:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ConfidentialKit.CFLStreamEncryption?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CFLStreamEncryption",
+                    "printedName": "ConfidentialKit.CFLStreamEncryption",
+                    "usr": "s:15ConfidentialKit19CFLStreamEncryptionC"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CFLStreamEncryptionCipher",
+                "printedName": "ConfidentialKit.CFLStreamEncryptionCipher",
+                "hasDefaultArg": true,
+                "usr": "s:15ConfidentialKit25CFLStreamEncryptionCipherO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:15ConfidentialKit19CFLStreamEncryptionC6cipherACSgAA0cD6CipherO_tcfc",
+            "mangledName": "$s15ConfidentialKit19CFLStreamEncryptionC6cipherACSgAA0cD6CipherO_tcfc",
+            "moduleName": "ConfidentialKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "generateKeystream",
+            "printedName": "generateKeystream(length:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "paramValueOwnership": "Owned",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ConfidentialKit19CFLStreamEncryptionC17generateKeystream6length10Foundation4DataVSgSin_tF",
+            "mangledName": "$s15ConfidentialKit19CFLStreamEncryptionC17generateKeystream6length10Foundation4DataVSgSin_tF",
+            "moduleName": "ConfidentialKit",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "crypt",
+            "printedName": "crypt(_:using:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "paramValueOwnership": "Owned",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "paramValueOwnership": "Owned",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15ConfidentialKit19CFLStreamEncryptionC5crypt_5using10Foundation4DataVSgAHn_AHntF",
+            "mangledName": "$s15ConfidentialKit19CFLStreamEncryptionC5crypt_5using10Foundation4DataVSgAHn_AHntF",
+            "moduleName": "ConfidentialKit",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:15ConfidentialKit19CFLStreamEncryptionC",
+        "mangledName": "$s15ConfidentialKit19CFLStreamEncryptionC",
+        "moduleName": "ConfidentialKit",
+        "intro_Macosx": "15.0",
+        "intro_iOS": "18.0",
+        "intro_tvOS": "18.0",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CFLStreamEncryptable",
+            "printedName": "CFLStreamEncryptable",
+            "usr": "s:15ConfidentialKit20CFLStreamEncryptableP",
+            "mangledName": "$s15ConfidentialKit20CFLStreamEncryptableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ConfidentialKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Metal",
+        "printedName": "Metal",
+        "declKind": "Import",
+        "moduleName": "ConfidentialKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}
