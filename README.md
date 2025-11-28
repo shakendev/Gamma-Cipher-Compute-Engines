@@ -3,7 +3,9 @@
 The concept of a gamma cipher, also known as OTP, implemented using SIMD instructions on CPUs and GPUs.
 
 This proof-of-concept allows us to test the performance of Apple's A/M-Series SoCs, as it uses NEON instructions for the CPU implementation and the Metal API for the GPU implementation.
+
 Both implementations utilize a zero-copy memory mechanism.
+
 CPU and GPU performance, as well as memory bandwidth, directly impact processing speed.
 
 | CPU Compute Engine  | GPU Compute Engine |
